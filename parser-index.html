@@ -1,16 +1,79 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title> Parser Website </title>
+        <link rel="stylesheet" href="parser-style.css">
     </head>
     <body>
+
+        <div class="nav-container">
+            <div class="wrapper">
+                <nav>
+
+                    <ul class = "nav-items">
+                        <li>
+                            <a href="parser-index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        
+        
         <h1> 
             Swedish
         </h1>
-        <h2>
-            Lexical Analyzer & Grammar Checker
-        </h2>
         
+        <h2>
+            Lexical Analyzer & Grammar Check
+        </h2>
+        <div class = "available-input">
+            <div class="subjects">
+                <h3>Subjects</h3>
+                <li>Jag &emsp;(I)</li>
+                <li>Du  &emsp;(You)</li>
+                <li>Han &emsp;(He)</li>
+                <li>Hon &emsp;(She)</li>
+            </div>
+            <div class="verbs">
+                <h3>Verbs</h3>
+                <li>köper (buy)</li>
+                <li>äljer (sell)</li>
+                <li>äter (eat)</li>
+                <li>gillar (like)</li>
+            </div>
+
+            <div class="objects">
+                <h3>Objects</h3>
+                <li>godis (candy)</li>
+                <li>frukt (fruit)</li>
+                <li>kött (meat)</li>
+                <li>kex (biscuit)</li>
+            </div>
+        </div>
+        
+        <div class = "input-boxes">
+            <form action="parser-script.js" method="post">
+                <input type = "text" input" id="input" cols="30" rows="10" placeholder="Put Swedish sentence with available input above"></input>
+                <input type="submit" value="Check">
+            </form>
+            <div class="incorrect-notify">
+                Error : input is not valid. Please check your typing and grammar.
+            </div>
+            <div class="correct-notify">
+                Congrats! Your input already correct!
+        </div>
+        
+        <script src="parser-script.js"></script>
     </body>
 </html>
