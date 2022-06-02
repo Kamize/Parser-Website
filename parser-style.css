@@ -29,6 +29,25 @@ h2 {
     line-height: 37px;
 }
 
+h3 {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+}
+
+input {
+    align-items: center;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+
 /* Navigation */
 .nav-container {
 /* position: absolute; */
@@ -107,14 +126,6 @@ nav ul{
     text-align: center;
     padding-top: 27px;
     padding-bottom: 19px;
-
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-
-    color: #000000;
 }
 
 .available-input .cards li {
@@ -149,13 +160,6 @@ nav ul{
     border: 0px;
     border-radius: 27.5px;
     padding-left: 74px;
-
-    align-items: center;
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
     
     /* color: #6E7076; */
 }
@@ -171,12 +175,6 @@ nav ul{
     background: #5233ED;
     border: 0px;
     border-radius: 27.5px;
-
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
 
     text-align: center;
 
