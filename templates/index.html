@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title> Parser Website </title>
-        <link rel="stylesheet" href="parser-style.css">
+        <link rel="stylesheet" href = {{url_for('static', filename='parser-style.css')}}>
     </head>
     <body>
 
@@ -81,6 +81,6 @@
             Congrats! Your input already correct!
         </div>
         
-        <script src="parser-script.js"></script>
+        <script src={{url_for("static", filename="parser-script.js")}}></script>
     </body>
 </html>
