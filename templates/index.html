@@ -65,9 +65,9 @@
             </div>
         </div>
 
-        <form class = "input-container", action="/", method="POST">
+        <form class = "input-container", onsubmit="checkGrammar(event)", method="GET">
             <div class="text-input">
-                <input type = "text" id="input" cols="30" rows="10" name="input" placeholder="Put Swedish sentence with available input above"></input>
+                <input type = "text" id="input" cols="30" rows="10" name="sentence" placeholder="Put Swedish sentence with available input above"></input>
             </div>
             <div class="button">
                 <input type="submit" value="Check">
