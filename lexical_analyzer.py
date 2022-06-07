@@ -1,4 +1,5 @@
-#Lexical Analyzer to identify lexical 
+#Lexical Analyzer to identify lexical
+accepted_state = ['SB', 'VB', 'NN']
 transition_table = {
     'q0':{
         'j':'q1',
@@ -16,7 +17,7 @@ transition_table = {
         'o':'q10'
     },
     'q4':{
-        'o':'q11',
+        'ö':'q11',
         'e':'q16'
     },
     'q5':{
@@ -28,7 +29,7 @@ transition_table = {
         'o':'q17'
     },
     'q7':{'r':'q15'},
-    'q8':{'g', 'SB'},
+    'q8':{'g': 'SB'},
     'q9':{'n':'SB'},
     'q10':{'n':'SB'},
     'q11':{
@@ -50,6 +51,28 @@ transition_table = {
     'q24':{'a':'q28'},
     'q25':{'t':'NN'},
     'q26':{'s':'NN'},
-    'q26':{'r':'VB'},
+    'q27':{'r':'VB'},
     'q28':{'r':'VB'}
 }
+
+def token(word):
+    state = 'q0'
+    try:
+        for char in word.lower():
+                # print(state)
+                # print(char)
+                state = transition_table[state][char]
+    except KeyError:
+        state = 'error'
+    state = 'error' if state not in accepted_state else state
+    return state
+
+def test():
+    text = input("word to analyze: ")
+    print("token: ", end='')
+    for word in text.lower().split():
+        print(token(word), end=' ')
+    print()
+
+if __name__ == '__main__':
+    test()
