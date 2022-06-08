@@ -49,12 +49,10 @@ input {
 }
 
 /* Navigation */
-.nav-container {
-/* position: absolute; */
-    width: 1512px;
+.topnav {
+    overflow: hidden;
     height: 111px;
-    left: 0px;
-    top: 0px;
+    width: 100%;
     background: linear-gradient(88.2deg, #5333ED 39.05%, #2CD5D9 88.62%);
 }
 
@@ -179,4 +177,22 @@ nav ul{
     text-align: center;
 
     color: #FFFFFF;
+}
+
+/*Notification*/
+.notif {
+    margin-top:21px;
+    width: 503px;
+    height: 22px;
+    left: 403px;
+    top: 767px;
+
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+    text-align: center;
+    
+    color: #FF0000;
 }

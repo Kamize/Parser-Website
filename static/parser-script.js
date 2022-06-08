@@ -14,7 +14,16 @@ function checkGrammar(event){
 }
 
 function notify(data){
-  console.log(data["tokens"].join(" "));
+  // console.log(data["tokens"].join(" "));
   to_edit.innerText = data["tokens"].join(" ");
   to_edit.hidden=false;
 }
+
+// function responsive(){
+//   var x = document.getElementById("myTopnav");
+//   if (x.className === "topnav") {
+//     x.className += " responsive";
+//   } else {
+//     x.className = "topnav";
+//   }
+// }

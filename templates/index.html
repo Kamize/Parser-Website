@@ -9,11 +9,10 @@
     </head>
     <body>
 
-        <div class="nav-container">
+        <div class="topnav" id="myTopnav">
             <div class="wrapper">
                 <nav>
-
-                    <ul class = "nav-items">
+                    <ul class="nav-items">
                         <li>
                             <a href="parser-index.html">Home</a>
                         </li>
@@ -23,9 +22,11 @@
                         <li>
                             <a href="#">Contact</a>
                         </li>
+                            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a> -->
                     </ul>
                 </nav>
             </div>
+        </div>
 
         </div>
         
@@ -77,8 +78,11 @@
         <div class="incorrect-notify" hidden>
             Error : input is not valid. Please check your typing and grammar.
         </div>
-        <div id = "notification" class="correct-notify" hidden>
+        <div class="correct-notify" hidden>
             Congrats! Your input already correct!
+        </div>
+        <div id = "notification" class = "notif" hidden>
+            STATE :: 
         </div>
         
         <script src={{url_for("static", filename="parser-script.js")}}></script>
