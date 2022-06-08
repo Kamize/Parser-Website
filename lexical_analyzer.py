@@ -67,11 +67,29 @@ def token(word):
     state = 'error' if state not in accepted_state else state
     return state
 
+
+
+
+
+
+
+
+
+    
+
+def sentence_to_tokens(sentence):
+    tokens = []
+    for word in sentence.lower().split():
+        tokens.append(token(word))
+    return tokens
+
+
 def test():
-    text = input("word to analyze: ")
-    print("token: ", end='')
-    for word in text.lower().split():
-        print(token(word), end=' ')
+    sentence = input("word to analyze: ")
+    tokens = sentence_to_tokens(sentence)
+    print("tokens: ", end='')
+    for token in tokens:
+        print(token, end=' ')
     print()
 
 if __name__ == '__main__':
