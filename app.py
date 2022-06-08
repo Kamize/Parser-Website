@@ -17,4 +17,4 @@ def grammar():
     return jsonify(data)
 
 if __name__ == "__main__" :
-    app.run(debug = True, host="127.0.0.1", port=5000)
+    app.run(debug = False, host="192.168.1.7", port=9999)
