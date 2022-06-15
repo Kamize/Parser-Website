@@ -11,7 +11,7 @@ parse_table = {
 def swedish_grammar_parse(sentence):
     out={'valid':False, 'parse_text':None, 'parse_stack':None, 'parse_input':None}
 
-    parse_text = f"{'stack':<20} | {'Input':<20}\n{'':-^43}\n"
+    parse_text = f"{'stack':<22} | {'Input':<22}\n{'':-^43}\n"
     parse_stack = ''
     parse_input = ''
 
@@ -19,9 +19,9 @@ def swedish_grammar_parse(sentence):
     stack = []
 
     stack = ['S'] + stack
-    parse_text+=f"{' '.join(stack):<20} | {' '.join(input):<20}\n"
-    parse_stack+=f"{' '.join(stack)}\n"
-    parse_input+=f"{' '.join(input)}\n"
+    parse_text+=f"{{{' '.join(stack):<20}}} | {{{' '.join(input):<20}}}\n"
+    parse_stack+=f"{{{' '.join(stack)}}}\n"
+    parse_input+=f"{{{' '.join(input)}}}\n"
     # print(f"{' '.join(stack):<20} {' '.join(input):<20}")
 
     try:
@@ -34,10 +34,13 @@ def swedish_grammar_parse(sentence):
                 stack = parsed_value.split() + stack
             else:
                 input.pop(0)
-            parse_text+=f"{' '.join(stack):<20} | {' '.join(input):<20}\n"
-            parse_stack+=f"{' '.join(stack)}\n"
-            parse_input+=f"{' '.join(input)}\n"
+            parse_text+=f"{{{' '.join(stack):<20}}} | {{{' '.join(input):<20}}}\n"
+            parse_stack+=f"{{{' '.join(stack)}}}\n"
+            parse_input+=f"{{{' '.join(input)}}}\n"
             # print(f"{' '.join(stack):<20} {' '.join(input):<20}")
+        # parse_text+=f"{{{' '.join(stack):<20}}} | {{{' '.join(input):<20}}}\n"
+        # parse_stack+=f"{{{' '.join(stack)}}}\n"
+        # parse_input+=f"{{{' '.join(input)}}}\n"
         parse_text+=f"{'':-^43}\n"
         out['valid'] = True
     except (KeyError, IndexError):
