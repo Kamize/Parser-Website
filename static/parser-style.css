@@ -9,7 +9,7 @@
     --primary-hover: #3820ae;
 
     --error-color: #FF0000;
-    --success-color: #00FF00;
+    --success-color: #84CC16;
 }
 
 *{
@@ -207,6 +207,29 @@ body {
 }
 
 /*Notification*/
+.incorrect-notify {
+    padding-top: 21px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+
+    color: var(--error-color)
+}
+
+.correct-notify {
+    padding-top: 21px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+    text-align: center;
+
+    color: var(--success-color)
+}
+
 .notif {
     margin-top:21px;
     width: 503px;
@@ -221,9 +244,11 @@ body {
     line-height: 22px;
     text-align: center;
     
-    color: var(--error-color);
+    color: var(--primary-color);
 }
 
+
 .notif table {
+    width: 100%;
     border: none
 }
