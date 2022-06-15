@@ -9,15 +9,19 @@ parse_table = {
 }
 
 def swedish_grammar_parse(sentence):
-    out={'parse_text':None, 'valid':False}
+    out={'valid':False, 'parse_text':None, 'parse_stack':None, 'parse_input':None}
 
     parse_text = f"{'stack':<20} | {'Input':<20}\n{'':-^43}\n"
+    parse_stack = ''
+    parse_input = ''
 
     input = sentence.split()
     stack = []
 
     stack = ['S'] + stack
     parse_text+=f"{' '.join(stack):<20} | {' '.join(input):<20}\n"
+    parse_stack+=f"{' '.join(stack)}\n"
+    parse_input+=f"{' '.join(input)}\n"
     # print(f"{' '.join(stack):<20} {' '.join(input):<20}")
 
     try:
@@ -31,17 +35,19 @@ def swedish_grammar_parse(sentence):
             else:
                 input.pop(0)
             parse_text+=f"{' '.join(stack):<20} | {' '.join(input):<20}\n"
+            parse_stack+=f"{' '.join(stack)}\n"
+            parse_input+=f"{' '.join(input)}\n"
             # print(f"{' '.join(stack):<20} {' '.join(input):<20}")
         parse_text+=f"{'':-^43}\n"
         out['valid'] = True
     except (KeyError, IndexError):
         parse_text+=f"{'':-^43}\n"
-        parse_text+=f"{'Error':^43}\n"
     finally:
         out['parse_text']=parse_text
-        print(parse_text)
+        out['parse_stack']=parse_stack
+        out['parse_input']=parse_input
     return out
 
 if __name__ == '__main__':
-    swedish_grammar_parse("jag gillar frukt")
-    swedish_grammar_parse("hello world")
+    print(swedish_grammar_parse("jag gillar frukt")['parse_text'])
+    print(swedish_grammar_parse("hello world")['parse_text'])
