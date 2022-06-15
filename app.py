@@ -1,8 +1,7 @@
-from dataclasses import dataclass
-from fileinput import filename
 from flask import Flask, jsonify, render_template, url_for, request
 
 from lexical_analyzer import sentence_to_tokens
+from pda_parser import swedish_grammar_parse
 
 app = Flask(__name__)
 
@@ -13,7 +12,7 @@ def index():
 @app.route("/grammar")
 def grammar():
     sentence = request.args.get("sentence")
-    data = {"tokens":sentence_to_tokens(sentence)}
+    data = swedish_grammar_parse(sentence)
     return jsonify(data)
 
 if __name__ == "__main__" :

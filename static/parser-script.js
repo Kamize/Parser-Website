@@ -15,7 +15,8 @@ function checkGrammar(event){
 
 function notify(data){
   // console.log(data["tokens"].join(" "));
-  to_edit.innerText = data["tokens"].join(" ");
+  console.log(data)
+  to_edit.innerText = data["parse_text"];
   to_edit.hidden=false;
 }
 
