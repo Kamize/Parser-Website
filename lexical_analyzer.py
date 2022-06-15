@@ -1,4 +1,6 @@
-#Lexical Analyzer to identify lexical
+'''
+    Lexical Analyzer to identify lexical unit
+'''
 accepted_state = ('SB', 'VB', 'NN')
 transition_table = {
     'q0':{
@@ -56,11 +58,12 @@ transition_table = {
 }
 
 def token(word):
+    # Initiate state
     state = 'q0'
+
+    # Parse word using transition table
     try:
         for char in word.lower():
-                # print(state)
-                # print(char)
                 state = transition_table[state][char]
     except KeyError:
         state = 'error'
