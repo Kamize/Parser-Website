@@ -1,5 +1,5 @@
 #Lexical Analyzer to identify lexical
-accepted_state = ['SB', 'VB', 'NN']
+accepted_state = ('SB', 'VB', 'NN')
 transition_table = {
     'q0':{
         'j':'q1',
