@@ -105,6 +105,18 @@ nav ul{
     color: var(--light-color);
 }
 
+/* Body */
+body {
+    
+    height: 1000px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
 /* Title Container*/
 
 .title-container {
@@ -152,16 +164,6 @@ nav ul{
     color: var(--dark-color);
 }
 
-/* Body */
-body {
-    /* padding: 0 30px 30px 30px; */
-    height: 1000px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* margin-top: -27px; */
-}
 
 
 /* Input */
@@ -220,4 +222,8 @@ body {
     text-align: center;
     
     color: var(--error-color);
+}
+
+.notif table {
+    border: none
 }
